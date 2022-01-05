@@ -1,0 +1,38 @@
+First a Story
+
+One morning I just wanted to play a game. I fired it up.
+The first thing I noticed is that there is no sound yet,
+even though there should have been some. The dearest ErP
+implementations had made it impossible to tell if there
+is sound before the speakers get a loud blast, which is
+how they get activated. I didn't make much of it. But,
+then I also noticed that the volume slider won't affect
+my sound card. That was a bit weird, but I just got a
+match in the game, and was headed in. Still, no sound
+yet? There should have been a loud sound on match start,
+why is there no sound coming from the speakers yet?
+
+I didn't have much time to wonder, as the game crashed
+right to the desktop. After a few more attempts to rejoin
+the match (as there is abandon penalty if I don't), I
+started looking at the setup. My sound card setting was
+lost, and the OS had selected the mobo sound card instead
+the one I was using. Setting that sound card had recover-
+ed my ability to play the game too. Apparently, the game
+didn't like the integrated sound card for whatever rea-
+son.
+
+The Motivation
+
+That had been a lot of stress. And I don't want to repeat
+it. Also, other OS tweaks tend to be a tedious chore, e.g.
+making sure nothing had re-enabled the task scheduler items
+that were manually disabled, or making the registry folders
+for each of the app that need their cpu priority level set.
+
+I want that stress and tediousness removed. This app will
+help me with it. If it helps you too, go ahead and use it.
+
+There are so many frustrations to take care, and not all of
+them pay off time-wise to tackle. But removing the stress
+of horrible UX, that is a game changer for me.

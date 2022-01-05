@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{80f0f68b-3394-41cd-b0b7-438cc39e7e1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WSLib">
+      <UniqueIdentifier>{1a51975c-7070-47e5-9493-d205882e031a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WSItems">
+      <UniqueIdentifier>{17a8a18c-3c64-4d42-a792-150cb714ee81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WSItems\TaskScheduler">
+      <UniqueIdentifier>{2d9b4238-3bc2-4d6d-b48a-0bd0f8f88d05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WSItems\CpuPriority">
+      <UniqueIdentifier>{d2c143ce-55bf-4470-a523-deff5ca29f26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WSItems\ServiceState">
+      <UniqueIdentifier>{d5f2991f-5f51-4763-ba7e-d25c847ff63f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WSLib\TaskSchedulerClient.cpp">
+      <Filter>WSLib</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsSetter.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsSetterMain.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="WSItems\TaskSchedulerItem.cpp">
+      <Filter>WSItems\TaskScheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="WSItems\TaskSchedulerItemFull.cpp">
+      <Filter>WSItems\TaskScheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="WSItems\TaskSchedulerItemPartial.cpp">
+      <Filter>WSItems\TaskScheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="WSLib\ProcessPriorityClient.cpp">
+      <Filter>WSLib</Filter>
+    </ClCompile>
+    <ClCompile Include="WSItems\CpuPriorityItem.cpp">
+      <Filter>WSItems\CpuPriority</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsLoader.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="WSLib\SoundCardSettingClient.cpp">
+      <Filter>WSLib</Filter>
+    </ClCompile>
+    <ClCompile Include="WSLib\WSServiceHelper.cpp">
+      <Filter>WSLib</Filter>
+    </ClCompile>
+    <ClCompile Include="WSItems\ServiceStateItem.cpp">
+      <Filter>WSItems\ServiceState</Filter>
+    </ClCompile>
+    <ClCompile Include="WSLib\WSTimeSetter.cpp">
+      <Filter>WSLib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WindowsSetter.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="WSLib\TaskSchedulerClient.h">
+      <Filter>WSLib</Filter>
+    </ClInclude>
+    <ClInclude Include="WSItems\TaskSchedulerItem.h">
+      <Filter>WSItems\TaskScheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="WSItems\TaskSchedulerItemFull.h">
+      <Filter>WSItems\TaskScheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="WSItems\TaskSchedulerItemPartial.h">
+      <Filter>WSItems\TaskScheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="WSLib\ProcessPriorityClient.h">
+      <Filter>WSLib</Filter>
+    </ClInclude>
+    <ClInclude Include="WSLib\WSLibHelpers.h">
+      <Filter>WSLib</Filter>
+    </ClInclude>
+    <ClInclude Include="WSItems\CpuPriorityItem.h">
+      <Filter>WSItems\CpuPriority</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsLoader.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="WSLib\SoundCardSettingClient.h">
+      <Filter>WSLib</Filter>
+    </ClInclude>
+    <ClInclude Include="WSLib\WSServiceHelper.h">
+      <Filter>WSLib</Filter>
+    </ClInclude>
+    <ClInclude Include="WSItems\ServiceStateItem.h">
+      <Filter>WSItems\ServiceState</Filter>
+    </ClInclude>
+    <ClInclude Include="WSLib\WSTimeSetter.h">
+      <Filter>WSLib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+*.suo
+*.idb
+*.ilk
+*.log
+*.*obj*
+*.*pdb*
+*.tlog
+*.user
+*.vcxproj.FileListAbsolute.txt
+.vs/
+x64/
+x86/
+[Bb]in/
+[Dd]ebug/
+[Oo]bj/
+[Pp]ackages/

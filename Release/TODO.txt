@@ -1,0 +1,24 @@
+The list of things to do.
+
+# Also check
+#  - Background apps
+# delete :desktop Microsoft Edge.lnk
+# delete: "C:\Users\Martine\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\Microsoft Edge.lnk"
+# check: C:\Users\Martine\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar
+#
+# check:
+# %AppData%\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar
+# %AppData%\Microsoft\Internet Explorer\Quick Launch\User Pinned\StartMenu
+
+# Check - Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+# Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+# Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+# Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run
+
+# TODO: Always inhibit C:\WINDOWS\System32\Speech\SpeechUX\SpeechUXWiz.exe in
+# every way possible, due to persistent popup coming up through an unknown shortcut
+# (if any, maybe it just randomly comes up and wants to be set up, even with the
+# thing disabled)
+
+# Windows Feedback Hub
+# C:\Program Files\WindowsApps\Microsoft.WindowsFeedbackHub_1.2203.761.0_x64__8wekyb3d8bbwe

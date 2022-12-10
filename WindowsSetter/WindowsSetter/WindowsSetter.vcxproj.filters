@@ -64,6 +64,9 @@
     <ClCompile Include="WSLib\WSTimeSetter.cpp">
       <Filter>WSLib</Filter>
     </ClCompile>
+    <ClCompile Include="WSLib\WSDeleter.cpp">
+      <Filter>WSLib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="WindowsSetter.h">
@@ -103,6 +106,9 @@
       <Filter>WSItems\ServiceState</Filter>
     </ClInclude>
     <ClInclude Include="WSLib\WSTimeSetter.h">
+      <Filter>WSLib</Filter>
+    </ClInclude>
+    <ClInclude Include="WSLib\WSDeleter.h">
       <Filter>WSLib</Filter>
     </ClInclude>
   </ItemGroup>

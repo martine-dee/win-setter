@@ -152,6 +152,7 @@
     <ClCompile Include="WSLib\ProcessPriorityClient.cpp" />
     <ClCompile Include="WSLib\SoundCardSettingClient.cpp" />
     <ClCompile Include="WSLib\TaskSchedulerClient.cpp" />
+    <ClCompile Include="WSLib\WSDeleter.cpp" />
     <ClCompile Include="WSLib\WSServiceHelper.cpp" />
     <ClCompile Include="WSLib\WSTimeSetter.cpp" />
   </ItemGroup>
@@ -166,6 +167,7 @@
     <ClInclude Include="WSLib\ProcessPriorityClient.h" />
     <ClInclude Include="WSLib\SoundCardSettingClient.h" />
     <ClInclude Include="WSLib\TaskSchedulerClient.h" />
+    <ClInclude Include="WSLib\WSDeleter.h" />
     <ClInclude Include="WSLib\WSLibHelpers.h" />
     <ClInclude Include="WSLib\WSServiceHelper.h" />
     <ClInclude Include="WSLib\WSTimeSetter.h" />

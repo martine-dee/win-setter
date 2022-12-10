@@ -44,6 +44,7 @@ bool SettingsLoader::LoadSettings(const char* settingIniPath, WindowsSetter& win
     regex ParserSetServiceState("SET SERVICE STATE \"([^\"]+)\" \"([^\"]+)\"");
     regex ParserTimeURL("TIME URL \"([^\"]+)\"");
     regex ParserTimeField("TIME FIELD \"([^\"]+)\"");
+    regex ParserDeletionTarget("DELETE \"([^\"]+)\"");
 
     int linePos = 0;
     string line;
@@ -275,6 +276,42 @@ bool SettingsLoader::LoadSettings(const char* settingIniPath, WindowsSetter& win
                 REPORT_ISSUE("Couldn't parse a TIME FIELD entry");
             }
             continue;
+        }
+
+        smatch deletionTargetMatch;
+        if (regex_match(line, deletionTargetMatch, ParserDeletionTarget)) {
+            if (deletionTargetMatch.size() == 2) {
+                string deletionTargetPathRaw = deletionTargetMatch[1].str();
+                {
+                    char buffer[1024];
+                    ExpandEnvironmentStringsA(
+                        deletionTargetPathRaw.c_str(),
+                        buffer,
+                        1024
+                    );
+                    deletionTargetPathRaw = buffer;
+                }
+                wstring deletionTargetPath = WSLibHelpers::stringTowstring(deletionTargetPathRaw);
+
+                if (!deletionTargetPath.empty()) {
+                    std::ifstream fin(deletionTargetPath);
+                    if (fin) {
+                        fin.close();
+                        windowsSetter.AddDeletionTargetItem(deletionTargetPath);
+                    }
+                    else {
+                        (*debugOutput) << "============================================" << endl;
+                        (*debugOutput) << "The DELETE entry targets an already absent file/invalid path '" << deletionTargetPath << "'" << endl;
+                    }
+                    continue;
+                }
+                else {
+                    REPORT_ISSUE("The DELETE entry is empty");
+                }
+            }
+            else {
+                REPORT_ISSUE("Couldn't parse a DELETE entry");
+            }
         }
         
         REPORT_ISSUE("Couldn't parse an entry");

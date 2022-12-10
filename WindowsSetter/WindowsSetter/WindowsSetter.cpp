@@ -11,6 +11,7 @@ using namespace std;
 #include "WSLib/WSTimeSetter.h"
 #include "WSItems/TaskSchedulerItemFull.h"
 #include "WSItems/TaskSchedulerItemPartial.h"
+#include "WSLib/WSDeleter.h"
 
 extern std::wostream* debugOutput;
 
@@ -60,6 +61,21 @@ bool WindowsSetter::SetAll() {
         WSTimeSetter::SetTime(this->timeURL, this->timeField);
     }
 
+    if (deletionTargetItems.size() > 0) {
+        for (std::wstring path : deletionTargetItems) {
+            if (!WSDeleter::deleteTarget(path)) {
+                // It's OK!
+                (*debugOutput) << "============================================" << endl;
+                (*debugOutput) << "Deleted '" << path << "'" << endl;
+            }
+            else {
+                // It didn't work
+                (*debugOutput) << "============================================" << endl;
+                (*debugOutput) << "Could not delete '" << path << "'" << endl;
+            }
+        }
+    }
+
     // TODO: Act upon the Sound Card Setting
 
     return false;
@@ -70,6 +86,7 @@ bool WindowsSetter::ClearAllEntries() {
     this->ClearCpuPriorityItems();
     this->ClearServiceStateItems();
     this->ClearSoundCardName();
+    this->ClearDeletionTargetItems();
     return false;
 }
 
@@ -135,6 +152,11 @@ bool WindowsSetter::SetSoundCardName(const wstring& soundCardName) {
 
 bool WindowsSetter::ClearSoundCardName() {
     this->soundCardName = L"";
+    return false;
+}
+
+bool WindowsSetter::ClearDeletionTargetItems() {
+    this->deletionTargetItems.clear();
     return false;
 }
 
@@ -224,4 +246,9 @@ bool WindowsSetter::SetTimeField(const wstring& timeURL) {
 
 bool WindowsSetter::IsTimeFieldSet() {
     return timeField != L"";
+}
+
+bool WindowsSetter::AddDeletionTargetItem(const std::wstring&path) {
+    deletionTargetItems.push_back(path);
+    return false;
 }

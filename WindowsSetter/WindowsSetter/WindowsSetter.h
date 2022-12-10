@@ -16,6 +16,7 @@ class WindowsSetter {
         std::wstring soundCardName;
         std::wstring timeURL;
         std::wstring timeField;
+        std::vector<std::wstring> deletionTargetItems;
 
     public:
         WindowsSetter();
@@ -32,6 +33,7 @@ class WindowsSetter {
         bool AddTaskSchedulerItem(TaskSchedulerItem*);
         bool AddCpuPriorityItem(CpuPriorityItem*);
         bool AddServiceStateItem(ServiceStateItem*);
+        bool AddDeletionTargetItem(const std::wstring&);
         bool SetSoundCardName(const std::wstring&);
         bool IsTimeURLSet();
         bool SetTimeURL(const std::wstring&);
@@ -41,6 +43,7 @@ class WindowsSetter {
         bool ClearSoundCardName();
         bool ClearTaskSchedulerItems();
         bool ClearCpuPriorityItems();
+        bool ClearDeletionTargetItems();
 
         // Testing only
         bool FillWithHardCodedEntries();
